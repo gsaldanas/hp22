@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness22</title>
+    <link href="../../../FA/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/start.css">
+    <script src="../../share/FE/alive_u.js"></script>
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a.link-top {
+            margin-top: 2em;
+            display: inline-block;
+        }
+
+        a.extern-link {
+            color: navy;
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        .activ_list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .activity-card {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border: 1px solid rgb(212, 212, 212);
+            padding: 1em;
+            margin: 1em;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 4px 2px rgb(192, 190, 190);
+        }
+
+        .activity-card>img,
+        p.titel {
+            cursor: pointer;
+        }
+
+        p.titel {
+            font-size: 20px;
+            font-weight: bold;
+            max-width: 150px;
+        }
+
+        h4 {
+            margin: 0.5em;
+        }
+
+        h3 {
+            margin: 0.5em;
+        }
+
+        ul {
+            margin: 2em;
+        }
+
+        ul.voordelen>li {
+            list-style-image: url('../../assets/img/vink.png');
+        }
+
+        .geen {
+            max-width: 70vw;
+            text-align: center;
+            cursor: pointer;
+            margin: 1em;
+
+        }
+
+        /* ------Overlay.   */
+        div#overlay_act {
+            background-color: white;
+            width: 100vw;
+            height: 100%;
+            position: fixed;
+            /* Stay in place */
+            z-index: 10;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            display: none;
+            padding: 15vw;
+            overflow-y: scroll;
+        }
+
+        img.img-act {
+            margin: 1em;
+            text-align: center;
+        }
+
+        .btn-green-w {
+            padding: 1rem;
+            background-color: #0FBF89;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 1em;
+          
+        }
+
+        @media screen and (min-width: 800px) {
+            .activ_list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .geen {
+                max-width: 50vw;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <a href="../home/index.html"><i class="fas fa-arrow-left"></i> &nbsp; TERUG</a>
+        </nav>
+        <!---THE OVERLAY-->
+        <div id="my_overlay" class="overlay">
+            <div class="overlay-content"></div>
+        </div>
+        <div class="container-content">
+            <p class="welkom-text">Cher participant,
+            </p>
+            <h4> Super que tu veuilles faire une nouvelle activité!</h4>
+            <div class="info-text">
+                <p class="extra-info-p">
+                    Vous trouverez ci-dessous les différentes activités parmi lesquelles vous pouvez choisir.
+                     Cliquez sur une activité pour obtenir plus d'informations. 
+                </p>
+            </div>
+
+        </div>
+        <div id="activ_list">
+
+        </div>
+        <div class="geen">
+            Je ne suis pas intéressé par une nouvelle activité de loisir.
+        </div>
+        <a class="link-top" href="#"><i class="fas fa-arrow-up"></i> HAUT</a>
+    </div>
+    <!-------OVERLAY ACTIVITY------>
+    <div id="overlay_act">
+        <a href="#" class="link-terug"><i class="fas fa-arrow-left"></i> &nbsp; RETOUR</a>
+
+        <h1 class="titel">Activity</h1>
+        <img class="img-act" src="https://happiness22.be/app/assets/svg/ac/fietsen.svg" alt="fietsen" />
+        <p class="desc">
+            lorem ipsum si amet
+        </p>
+        <h3> Bienfaits pour la santé : </h3>
+        <p class="gezond">
+            lorem ipsum
+        </p>
+        <ul class="voordelen">
+
+        </ul>
+        <h3>Où pratiquer ? </h3>
+        <p class="waar">
+            lorem ipsum
+        </p>
+
+        <h3> Quand pratiquer ? </h3>
+        <p class="when">
+            Lorem ipsum
+        </p>
+        <div class="links-act">
+
+        </div>
+        <h3> Coût ? </h3>
+        <p class="kost">
+            Lorem ipsum
+        </p>
+        <h3> Équipement nécessaire: </h3>
+        <p class="access">
+            Lorem ipsum
+        </p>
+        <h3> Qui contacter? </h3>
+        <p class="contactp">
+            Lorem ipsum
+        </p>
+
+        <button id="choose_act" class="btn-green-w">Choisir cette activité</button>
+
+    </div>
+    <!-------END OVERLAY-->
+    <script src="../../share/FE/util.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/activ.js"></script>
+</body>
+
+</html>

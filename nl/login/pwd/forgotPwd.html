@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Restore with email</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      color: #29a59c;
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+
+    .fields {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-box {
+      display: flex;
+      justify-content: center;
+    }
+
+    input,
+    button {
+      width: 350px;
+      margin-top: 0.5em;
+      font-size: 20px;
+    }
+
+    button {
+      padding: 0.2em;
+      background-color: #29a59c;
+      color: white;
+      border: 0;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .feedback {
+      padding: 0.3em;
+      background-color: red;
+      color: white;
+    }
+
+    .zie-pwd {
+      font-size: 12px;
+      text-decoration: underline;
+      text-align: center;
+      cursor: pointer;
+      margin: 0.5em;
+    }
+
+    .no-display {
+      display: none;
+    }
+
+    .link-login {
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .disabled {
+      background-color: #ccc;
+      color: white;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="restore-container">
+    <h1>
+      Reset your password</h1>
+    <p>
+     Just fill in your email and we'll send you a link to reset
+      your password.
+    </p>
+    <p class="feedback no-display">No account matches ...</p>
+    <div class="form-box">
+      <form action="" class="form-pwd" id="restorePWD">
+        <div class="fields">
+          <input type="text" name="email" placeholder="EMAIL ADDRESS" required />
+          <button id="go" class="disabled" disabled>SEND</button>
+        </div>
+      </form>
+    </div>
+    <img class='image-pwd' src="../../../assets/img/key-yellow_128.png" alt="security" />
+    <div class="link-login "><a href="../index.html">CANCEL</a></div>
+    <div class="link-login no-display">
+      <a href="../index.html">Login again</a>
+    </div>
+  </div>
+
+  <script src="pwd.js"></script>
+</body>
+
+</html>

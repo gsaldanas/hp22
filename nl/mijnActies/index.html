@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness22</title>
+    <link rel="stylesheet" href="css/start.css">
+    <link href="../../../FA/css/all.min.css" rel="stylesheet">
+    <script src="../../share/FE/alive_u.js"></script>
+</head>
+<style>
+     .activity-card {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border: 1px solid rgb(212, 212, 212);
+            padding: 1em;
+            margin: 1em;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 4px 2px rgb(192, 190, 190);
+            cursor: pointer;
+        }
+     .btn-green-w {
+            padding: 1rem;
+            background-color: #0FBF89;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 1em;
+            min-width: 300px;
+          
+        }
+        a.link-top {
+            color: black;
+            text-decoration: none;
+            margin-top: 2em;
+            display: inline-block;
+        }
+        /*overzicht card */
+    .act-card{
+        border:1px solid #ccc;
+        box-shadow: 2px 2px 4px 2px rgb(192, 190, 190);
+        min-width: 90vw;
+        padding: 0.5em;
+        margin: 0.3em;
+    }
+    .type-act{
+        font-size: 85%;
+        color: gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        }
+    .frequency{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+    span.green{
+        color:green;
+    }
+    a.del-entry{
+        display: inline-block;
+        font-size: 20px;
+        color: rgb(166, 162, 162);
+    }
+        
+</style>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="logo">
+                <img src="../../assets/svg/happiness22-logo.svg" alt="happiness22 logo">
+            </div>
+            <!--OPEN THE OVERLAY ON THE HAMBURGER MENU-->
+            <div id="my_hamburger" class="hamburger" onclick="openOverlay()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+            </div>
+        </nav>
+        <!---THE OVERLAY-->
+        <div id="my_overlay" class="overlay">
+
+            <div class="overlay-content">
+               
+                <div class="overlay-links">
+                    <a href="../home/"> <i class="fas fa-home"></i> HOME</a>
+                    <a href="../profiel/"><i class="fas fa-user-circle"></i> Mijn Profiel </a>
+                    <a href="../mijnActies/"><i class="far fa-smile"></i> Activiteiten</a>
+                    <a href="../../fr/home/">FR - Français</a>
+                    <a href="../faq/faq_happi_nl.pdf" target="_blank">FAQ</a>
+                    <a href="#" id="link_logout">Log out</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-content">
+            <p class="welkom-text" id="beste_user">Mijn  activiteiten </p>
+       
+            </p>
+            <div class="acties">
+
+            </div>
+            <div class="info-text">
+            </div>
+        
+            <div class="invullen">
+                <h3>Vul je wekelijks activiteit in</h3>
+                <button id="btn_inv" class="btn-green-w">Registreer activiteit</button>
+            </div>
+            <div style="text-align: center;">
+                <i class="fas fa-exchange-alt"></i>
+            <a href="../activities/index.html">Ik wens mijn activiteit te wijzigen.</a>
+            </div>
+            <h3>Overzicht</h3>
+            <div class="overzicht">
+                Nog geen wekelijkse activiteiten.
+            </div>
+        </div>
+        <a class="link-top" href="#"><i class="fas fa-arrow-up"></i> TOP</a>
+    </div>
+    <script src="../../share/FE/util.js"></script>
+    <script src="js/overlay.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/activity.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/overzicht.js"></script>
+    <script src="js/delete.js"></script>
+</body>
+
+</html>

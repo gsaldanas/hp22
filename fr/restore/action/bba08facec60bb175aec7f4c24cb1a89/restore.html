@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Reset wachtwoord</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1{
+                color:  #29A59C;
+            }
+            h3{
+                color:  #FFC840;
+
+            }
+            h1 , h3 , p {
+                text-align: center;
+            }
+            p{
+                color:gray;
+            }
+            .fields{
+                display: flex;
+                flex-direction: column;
+
+            }
+            .form-box{
+                display: flex;
+                justify-content: center;  
+            }
+            input, button{
+                width: 300px;
+                margin: 0.3em;
+                font-size: 20px;
+            }
+            button{
+                padding: 0.2em;
+                background-color: #29A59C;
+                color: white;
+                border: 0;
+                cursor: pointer;
+            }
+            .feedback{
+
+                padding: 0.3em;
+                background-color: red;
+                color:white;
+            }
+            .zie-pwd{
+                font-size: 12px;
+                text-decoration: underline;
+                text-align: center;
+                cursor: pointer;
+                margin: 0.5em;
+            }
+            .no-display{
+                display: none;
+            }
+            .link-login{
+                text-align: center;
+                font-size: 20px;
+                color:  #29A59C;
+            } img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .disabled{
+                background-color: #ccc;
+                color: white;
+                cursor:not-allowed;
+            }
+        </style>
+        <script src="js/checkToken.js"></script>
+    </head>
+    <body>
+        <div class="restore-container">
+            <h1>Reset your password</h1>
+            <h3>Veuillez choisir un nouveau mot de passe pour terminer la connexion. Votre mot de passe devrait être difficile à deviner pour les autres.</h3>
+            <p>
+                Doit contenir au moins 1 caractère alphabétique minuscule, au moins 1 caractère alphabétique majuscule,
+                au moins 1 caractère numérique et doit être de 8 caractères ou plus.
+            </p>
+            <p class="feedback no-display">The new password and confirmation password do not match!!</p>
+            <div class="form-box">
+                <form action="" class="form-pwd" id="restorePWD" method="post">
+                    <div class="fields">
+
+                        <input type="password" name="pwd" placeholder="New password" required>
+
+                        <input type="password" name="pwd1" placeholder="Re-enter new password" required>
+                        <span class="zie-pwd">View password</span>
+                        <button class="btn-pwd disabled" disabled>Change password</button>
+                    </div>
+
+                </form>
+
+            </div>
+            <img class="image-pwd"
+                src="https://happiness22.be/app/assets/img/key-yellow_128.png"
+                alt="security"
+                />
+            <div class="link-login no-display"><a href="https://happiness22.be/app/nl/login/index.html">Login again</a></div>
+        </div>
+        <script src="js/restore.js"></script>
+    </body>
+</html>

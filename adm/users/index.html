@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New user</title>
+    <script src="../util/status_app.js"></script>
+    <style>
+        ul.ul-menu>li {
+            margin: 1em;
+            border: 1px solid blueviolet;
+        }
+
+        form#new_user,
+        .form-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .new-user,
+        #reset {
+            display: none;
+        }
+
+        span.span-btn {
+            border: 1px solid blue;
+            background-color: yellow;
+            margin-left: 10px;
+            padding: 0.2em;
+            cursor: pointer;
+        }
+
+        li.user-card {
+            padding: 0.3em;
+            border-bottom: gray 1px dashed;
+        }
+
+        a.reset {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        .feedback {
+            color: red;
+            display: none;
+        }
+
+        ul>li>em {
+            padding: 0.2em;
+            border-radius: 5px;
+            border: 1px solid purple;
+            background-color: aliceblue;
+            cursor: pointer;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>User beheer</h1>
+    <ul class="ul-menu">
+        <li><a href="../dashboard/index.html"> DASHBOARD </a></li>
+        <li><a href="#" id="add_user">NIEUWE GEBRUIKER</a></li>
+        <li><a href="#" id="list_users">ALLE USERS</a></li>
+        <li><label for="zoeken">Zoeken</label><input type="text" name="zoek_user" id="zoek_user"
+                placeholder="user zoeken"></li>
+    </ul>
+    <div class="feedback"></div>
+    <div class="content"></div>
+    <div class="new-user">
+        <form method="post" id="new_user">
+
+            <input type="hidden" name="uid" value="0">
+            <div class="form-block">
+                <label for="email">Email</label>
+                <input type="text" name="email" required>
+            </div>
+            <div class="form-block">
+                <label for="vnaam">Voornaam user:</label>
+                <input type="text" name="vnaam_user" required>
+            </div>
+            <div class="form-block">
+                <label for="Naam">Naam user:</label>
+                <input type="text" name="naam_user" required>
+            </div>
+            <div class="form-block">
+                <label for="password">Password</label>
+                <input type="text" name="pwd1" required>
+            </div>
+            <div class="form-block">
+                <label for="password2">Password opnieuw</label>
+                <input type="text" name="pwd2" required>
+            </div>
+            <div class="form-block-action">
+                <button type="submit" id="save_user">
+                    SAVE
+                </button>
+                <button class="cancel">CANCEL</button>
+            </div>
+
+        </form>
+    </div>
+    <div id="reset">
+        <h2 class="user-naam"></h2>
+        <form id="resetPwForm" method="post">
+            <input type="hidden" name="uid" value="0">
+
+            <div class="form-block">
+                <label for="password">Password</label>
+                <input type="text" name="pwd1" required>
+            </div>
+            <div class="form-block">
+                <label for="password2">Password opnieuw</label>
+                <input type="text" name="pwd2" required>
+            </div>
+            <div class="form-block-action">
+                <button type="submit" id="save_pw">
+                    SAVE
+                </button>
+                <button class="cancel-pw">CANCEL</button>
+            </div>
+        </form>
+    </div>
+    <div id="modules_user"></div>
+    <script src="../../share/FE/util.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/actionUser.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/newuser.js"></script>
+    <script src="js/delete.js"></script>
+    <script src="js/resetP.js"></script>
+    <script src="js/userCard.js"></script>
+    <script src="js/userModules.js"></script>
+    <script src="js/listMods.js"></script>
+</body>
+
+</html>

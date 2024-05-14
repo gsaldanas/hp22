@@ -1,0 +1,10 @@
+document.getElementById('btn_discover')
+.addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.location='../activities/';
+});
+document.getElementById('btn_stay')
+.addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.location='index.html'
+});

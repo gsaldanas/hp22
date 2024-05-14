@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-lng {
+            background-color: lightgrey;
+            color: green;
+            padding: 0.5em;
+            cursor: pointer;
+            min-width: 160px;
+            margin: 0.5em;
+            text-align: center;
+        }
+        .btn-lng:hover{
+            background-color: orange;
+            
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .lng-choice {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-logo,
+        .lng-choice {
+            margin: 2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="image-logo">
+            <img src="https://happiness22.be/wp-content/uploads/2021/12/happiness-logo.svg" alt="happiness22">
+        </div>
+        <div class="lng-choice">
+            <div class="btn-lng" id="frans">FR - Français</div>
+            <div class="btn-lng" id="ndlns">NL - Nederlands</div>
+        </div>
+    </div>
+    <script src="../app/share/FE/lang.js"></script>
+</body>
+
+</html>

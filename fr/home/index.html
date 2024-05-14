@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness22</title>
+    <link rel="stylesheet" href="css/start.css">
+    <link href="../../../FA/css/all.min.css" rel="stylesheet">
+    <script src="../../share/FE/alive_u.js"></script>
+</head>
+<style>
+     .activity-card {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border: 1px solid rgb(212, 212, 212);
+            padding: 1em;
+            margin: 1em;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 4px 2px rgb(192, 190, 190);
+            cursor: pointer;
+        }
+</style>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="logo">
+                <img src="../../assets/svg/happiness22-logo.svg" alt="happiness22 logo">
+            </div>
+            <!--OPEN THE OVERLAY ON THE HAMBURGER MENU-->
+            <div id="my_hamburger" class="hamburger" onclick="openOverlay()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+            </div>
+        </nav>
+        <!---THE OVERLAY-->
+        <div id="my_overlay" class="overlay">
+
+            <div class="overlay-content">
+               
+                <div class="overlay-links">
+                    <a href="../profiel/">Mon profil</a>
+                    <a href="../mijnActies/"><i class="far fa-smile"></i> Activités</a>
+                    <a href="../../nl/home/">NL - Nederlands</a>
+                    <a href="../faq/faq_happi_fr.pdf" target="_blank">FAQ</a>
+                    <a href="#" id="link_logout">Log out</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-content">
+            <p class="welkom-text" id="beste_user">Cher participant</p>
+            <p class="welkom-text">Bienvenue à vous <span class="green-text">Happiness</span><span
+                    class="yellow-text">22</span> profil!
+            </p>
+            <div class="acties">
+
+            </div>
+            <div class="info-text">
+                <p class="extra-info-p">Nous vous contacterons mensuellement pour le questionnaire de 5 minutes.</p>
+            </div>
+            <div class="img-container">
+                <img src="../../assets/svg/welkom-illustration.svg" alt="welkom illustration">
+            </div>
+        </div>
+    </div>
+    <script src="../../share/FE/util.js"></script>
+    <script src="js/overlay.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/activity.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+
+</html>

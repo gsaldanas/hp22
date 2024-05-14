@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness22</title>
+    <link rel="stylesheet" href="css/start.css">
+        <script src="../../share/FE/alive_u.js"></script>
+    <style>
+        .buttons-back {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-green-wide {
+            padding: 1rem;
+            background-color: #0FBF89;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            min-width: 80vw;
+            margin: 1em;
+        }
+
+        @media screen and (min-width: 800px) {
+            .buttons-back{
+                flex-direction: row;
+            }
+            .btn-green-wide {
+                min-width: 20vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav></nav>
+        <!---THE OVERLAY-->
+        <div id="my_overlay" class="overlay">
+            <div class="overlay-content"></div>
+        </div>
+        <div class="container-content">
+            <p class="welkom-text">Beste deelnemer,
+            </p>
+            <div class="info-text">
+                <p class="extra-info-p">
+                    Bedankt voor het invullen van de eerste vragenlijst!
+                    De volgende maanden duurt de vragenlijst slechts 5 minuten.
+                    <br />
+                    Je kan nu kiezen om wekelijks een nieuwe vrijetijdsactiviteit te doen.
+                    Zo houden we bij hoe dit een invloed heeft op
+                    Je geluksniveau.
+                    </br>
+                    Je kan kiezen uit 7 activiteiten. Heb je zin om een
+                    Nieuwe activiteit te starten voor het onderzoek?
+                </p>
+            </div>
+            <!--------Buttons-->
+            <div class="buttons-back">
+                <button class="btn-green-wide" id="btn_discover">Ondekt de activiteiten</button>
+                <button class="btn-green-wide" id="btn_stay">Ik blijf bij de vragenlijst</button>
+            </div>
+            <div class="img-container">
+                <img src="../../assets/svg/welkom-illustration.svg" alt="welkom illustration">
+            </div>
+        </div>
+    </div>
+    <script src="js/back.js"></script>
+</body>
+
+</html>

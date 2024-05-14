@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #F7F7F7;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.bar1, .bar2 {
+  border-radius: 5px;
+  width: 30px;
+  height: 5px;
+  background-color: #1D1D1D;
+  margin: 8px 0;
+  transition: ease-in-out 0.2s;
+}
+
+/*ANIMATE HAMBURGER MENU*/
+.change .bar1 {
+  transform: translateY(5px) translateX(3px) rotate(45deg);
+}
+
+.change .bar2 {
+  transform: translateY(-7px) translateX(3px) rotate(-45deg);
+}
+
+.overlay {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: white;
+  z-index: 20;
+  transition: linear 0.2s;
+}
+
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay-links {
+  margin-bottom: 2em;
+}
+
+.overlay-links a {
+  padding-bottom: 1em;
+  display: block;
+  text-align: left;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #1D1D1D;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welkom-text {
+  color: #222;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.green-text {
+  color: #0FBF89;
+}
+
+.yellow-text {
+  color: #FAAD00;
+}
+
+.info-text {
+  margin-bottom: 60px;
+}
+
+.info-p {
+  color: #222;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.extra-info-p {
+  color: #222;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.container-content {
+  padding: 24px;
+}
+
+.img-container img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+.btn-green{
+    padding: 1rem;
+    background-color: #0FBF89;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1em;
+    margin-left: 30%;
+}

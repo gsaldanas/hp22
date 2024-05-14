@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../util/status_app.js"></script>
+    <title>Modules</title>
+    <style>
+        #form_new{
+            display: none;
+            border: solid;
+            background-color: beige;
+
+        }
+        form#new_mod{
+            display: flex;
+            flex-direction: column;
+        } 
+        .form-block{
+            display: flex;
+            flex-direction: column;
+        }
+        .content{
+            display: flex;
+        }
+        #users_list{
+            display: flex;
+        }
+        .mod-card{
+            border:1px solid blue;
+            background-color: aliceblue;
+            max-width: 300px;
+            margin: 1em;
+        }
+                span{
+            border: 1px solid green;
+            padding: 0.5em;
+            margin: 1em;
+            display: block;
+        }
+.btn {
+    background-color: yellow;
+    padding: 0.3em;
+    display: inline-block;
+    border: outset;
+    margin-left: 0.2em;
+}
+span.span-mod{
+    border:red solid 1px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    color: red;
+}
+    </style>
+</head>
+<body>
+    <h1>MODULES</h1>
+<ul >
+    
+    <li><a href="../dashboard/index.html" > DASHBOARD </a></li>
+    <li><a href="#" id="new_mod">NIEUWE MODULE</a></li>
+    <li><a href="#" id="mods">TOON MODULES</a></li>
+</ul>
+<div class="content">
+</div>
+<div id="users_list"></div>
+<div id="form_new">
+    <form id="form_new_mod" method="post">
+        <input type="hidden" name="mod_id" value="0">
+        <div class="form-block">
+            <label for="Naam">Naam module:</label>
+            <input type="text" name="naam_mod" required>
+        </div>
+        <div class="form-block">
+            <label for="img">Icon module:</label>
+            <input type="text" name="img_mod" >
+        </div>
+        <div class="form-block">
+            <label for="img">Developers module:</label>
+            <select name="dev_mod" >
+                <option value="0" selected>NEEN</option>
+                <option value="1">JA</option>
+            </select>
+        </div>
+        <div class="form-block">
+            <label for="Path">Path module (vanuit doc root):</label>
+            <input type="text" name="path_mod" required>
+        </div>
+        <div class="form-block">
+            <label for="desc">Omschrijving module:</label>
+            <textarea name="desc_mod" id="" cols="10" rows="5"></textarea>
+        </div>
+        <div class="form-block-action">
+        <button id="btn_save">SAVE</button>
+        <button id="btn_cancel">CANCEL</button>
+        </div>
+    </form>
+</div>
+<script src="js/init.js"></script>
+<script src="../../share/FE/util.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/form.js"></script>
+<script src="js/modules.js"></script>
+<script src="js/actionsCard.js"></script>
+<script src="js/toUser.js"></script>
+<script src="js/actionUsers.js"></script>
+<script src="js/actionDelUM.js"></script>
+<script src="js/edit.js"></script>
+<script src="js/del.js"></script>
+</body>
+</html>
